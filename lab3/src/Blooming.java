@@ -1,13 +1,15 @@
-public class Blooming extends Plant{
-    private final double timeBluming;
-    public Blooming(String title, double height, double lifetime, double timeBluming){
+// ИСПРАВЛЕНО: переменная timeBluming переименована в bloomingDuration
+public class Blooming extends Plant {
+    private final double bloomingDuration; // ИСПРАВЛЕНО: было timeBluming
 
+    public Blooming(String title, double height, double lifetime, double bloomingDuration) {
         super(title, height, lifetime);
-        this.timeBluming=timeBluming;
+        this.bloomingDuration = bloomingDuration;
     }
 
     @Override
     public String toString() {
-        return super.toString() + " Продолжительность цветения: " + timeBluming + ", " ;
+        // ИСПРАВЛЕНО: убрана лишняя запятая в конце строки
+        return super.toString() + " Продолжительность цветения: " + bloomingDuration;
     }
 }
